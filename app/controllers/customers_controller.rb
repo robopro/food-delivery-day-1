@@ -7,14 +7,13 @@ class CustomersController
   end
 
   def list
-    # displays all customers to user
     # get all customers
-    # customers = @customers_repo.all
+    # displays all customers to user
     @view.display(@customers_repo.all)
   end
 
+  # create new customer and add to repo
   def add
-    # create new customer and add to repo
     # ask user for name and price
     attributes = {
       name: @view.ask_for_string(:name),

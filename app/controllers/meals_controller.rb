@@ -7,14 +7,13 @@ class MealsController
   end
 
   def list
-    # displays all meals to user
     # get all meals
-    # meals = @meals_repo.all
+    # displays all meals to user
     @view.display(@meals_repo.all)
   end
 
+  # create new meal and add to repo
   def add
-    # create new meal and add to repo
     # ask user for name and price
     attributes = {
       name: @view.ask_for_string(:name),
